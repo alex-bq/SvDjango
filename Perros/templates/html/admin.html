@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1> Editar datos de cliente</h1>
+
+    <br>
+    <button type="button">
+        <a href="{% url 'alumnosAdd' %}"> Agregar</a>
+    </button>
+
+    <div id="idMensajes">
+        {% if mensaje %}
+        {{mensaje %}}
+        {% endif %}
+
+    </div>
+
+    <table>
+        {% if perros %}
+        <th>Rut</th>
+        <th>Nombre</th>
+        <th>Apellido P.</th>
+        <th>Eliminar</th>
+        <th>Modificar</th>
+        {% for x in perros %}
+        <tr>
+            <td> {{ x.rut }}
+            <td> {{ x.nombre }}
+            <td> {{ x,apellido_paterno }}
+            <td> <a href="{% url 'perros_del' pk=x.rut %}">Eliminar</a>
+            <td> <a href="{% url 'perros_finEdit' pk=x.rut %}">Modificar</a>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+
+</body>
+
+</html>

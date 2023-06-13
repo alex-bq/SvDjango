@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Protectora Adán &#128153;</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #243a69;">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../image/logoBlanco.png" alt="logo" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" class="text-light bg-dark" href="../index.html" style="color: #f4f4f2;">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="donaciones.html" style="color: #f4f4f2;">Donaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="perros.html" style="color: #f4f4f2;">Perros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="formulario.html" style="color: #f4f4f2;">Formulario</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="api.html" style="color: #f4f4f2;">api</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="color: #f4f4f2;" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="container">
+    <h2 class="centrar">Formulario de Contacto</h2>
+  </header>
+
+
+
+  <section>
+    <div class="container">
+      <form action="" id="formulario_contacto">
+
+        <label for="nombre">Nombre</label>
+        <br>
+        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Machuca">
+
+
+        <br>
+        <label for="email">Correo Electronico</label>
+        <br>
+        <input type="email" name="email" id="email" class="form-control" placeholder="luchito@mail.com">
+        <br>
+
+        <label for="tipo_documento">Tipo de Documento</label> <br>
+        <select name="tipo_documento" id="tipo_documento" class="form-control">
+          <option value="">Seleccionar</option>
+          <option value="rut">Rut</option>
+          <option value="pasaporte">Pasaporte</option>
+        </select>
+        <br>
+
+        <label for="rut">Rut</label>
+        <br>
+        <input type="text" name="rut" id="rut" class="form-control" placeholder="21.345.987-3"
+        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1') ;">
+        <br>
+
+        <label for="telefono">Numero de telefono (opcional)</label>
+        <br>
+        <input type="number" name="telefono" id="telefono" class="form-control" placeholder="999027635">
+        <br>
+
+        <label for="ciudad">Ciudad</label> <br>
+        <select name="ciudad" id="ciudad" class="form-control">
+          <option value="">Seleccionar</option>
+          <option value="puertoMontt">Puerto Montt</option>
+          <option value="osorno">Osorno</option>
+          <option value="puertoVaras">Puerto Varas</option>
+          <option value="calbuco">Calbuco</option>
+        </select>
+        <br>
+
+        <label for="mensaje">Comentario</label>
+        <br>
+        <textarea name="mensaje" id="mesaje" cols="30" rows="10" class="form-control"
+          placeholder="Me gustaria participar en esta ONG porque..."></textarea>
+        <br>
+
+        <button type="submit" id="guardar" class="btn btn-outline-success">Guardar</button>
+        <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+        <br>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+  <script src="../js/form_jquery.js"></script>
+
+  <script src="../js/jquery.rut.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(function () {
+      $("#rut").rut().on('rutValido', function (e, rut, dv) {
+        alert("El rut " + rut + "-" + dv + " es correcto");
+      }, { minimumLength: 7 });
+    })
+  </script>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
